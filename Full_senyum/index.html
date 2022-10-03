@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <title>Frelo</title>
+
+  <style>
+    body {
+      background-image: url('https://github.com/RafiMM0609/ESP8266_WebServer_Relay-SonOff-/blob/main/Pictures/rm209-ning-20-g.jpg?raw=true');
+      min-height: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .container {
+      width: 100%;
+      min-height: 200px;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      align-items: center;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h2 {
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h3 {
+      text-align: center;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 50px;
+    }
+
+    p {
+      padding-top: 80px;
+      text-align: center;
+      font-size: 10px;
+    }
+
+    .button1 {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .button:hover {
+      background-color: #b93131
+    }
+
+    .button:active {
+      background-color: #ffffff;
+      transform: translateY(4px);
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 55px;
+      font-size: 15px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #56b8f1;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: .5s;
+    }
+
+    .button:hover {
+      background: #1891d8;
+    }
+
+    .tombol {
+      display: inline-block;
+      padding: 10px 55px;
+      font-size: 15px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #f46166;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: .5s;
+    }
+
+    .tombol:hover {
+      background: #F02C31;
+    }
+
+    .box {
+      border-radius: 10px;
+      width: 98%;
+      height: 30%;
+      padding: 5px;
+      border: 0px solid rgb(255, 255, 255);
+      box-sizing: border-box;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <img src="https://www.telkom.co.id/data/image_upload/page/1594108255409_compress_logo%20telkom%20indonesia.png"
+        alt="Simply Easy Learning" width="260" height="200">
+      <h1>Selamat Datang</h1>
+      <h2>Pemeliharaan FTM</h2>
+      <h3>
+        <font size="6" color="#262626">Y O G Y A K A R T A</font>
+      </h3>
+    </div>
+    <div>
+      <form action="/get">
+        <table border="0" align="center">
+          <tbody>
+            <tr height="30px">
+              <td><strong>Nama</strong></td>
+              <td><input class="box" type="text" name="nama" size="15"></td>
+            </tr>
+            <tr height="30px">
+              <td><strong>Mitra</strong></td>
+              <td><input class="box" type="text" name="mitra" size="15"></td>
+            </tr>
+            <tr height="30px">
+              <td><strong>Nomor HP</strong></td>
+              <td><input class="box" type="number" name="nohp" size="15"></td>
+            </tr>
+            <tr height="30px">
+              <td><label for="keperluan"><strong>Keperluan</strong></label></td>
+              <td><select class="box" name="keperluan" id="keperluan">
+                  <option value="Pasang Baru"> Pasang baru </option>
+                  <option value="Maintenance"> Maintenance </option>
+                  <option value="Gangguan"> Gangguan </option>
+                </select></td>
+            </tr>
+            <tr height="30px">
+              <td><strong>Detail Kegiatan</strong></td>
+              <td><input class="box" type="text" name="det_keg" size="15"></td>
+            </tr>
+            <tr height="30px">
+              <td><strong>Link KTP</strong></td>
+              <td><input class="box" type="text" name="linkktp" size="15"></td>
+            </tr>
+            <tr height="30px" align="center">
+              <td><input class="tombol button1" type="reset" value="Clear"></td>
+              <td><input class="button button1" type="submit" value="Submit"></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+
+</body>
+<p>Copyright @ 2022 - WITEL YOGYAKARTA</p>
+
+</html>

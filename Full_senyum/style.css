@@ -1,0 +1,101 @@
+body {
+    background-image: url('https://github.com/RafiMM0609/ESP8266_WebServer_Relay-SonOff-/blob/main/Pictures/rm209-ning-20-g.jpg?raw=true');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    width: 100%;
+    min-height: 200px;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3 {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+}
+
+p {
+    padding-top: 90px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.button1 {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button:hover {
+    background-color: #b93131
+}
+
+.button:active {
+    background-color: #ffffff;
+    transform: translateY(4px);
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 55px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #56b8f1;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.button:hover {
+    background: #1891d8;
+}
+
+.tombol {
+    display: inline-block;
+    padding: 10px 55px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #f46166;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.tombol:hover {
+    background: #F02C31;
+}
+
+.box {
+    border-radius: 10px;
+    width: 98%;
+    height: 30%;
+    padding: 5px;
+    border: 0px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    text-align: center;
+}

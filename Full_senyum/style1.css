@@ -1,0 +1,21 @@
+body,
+h1 {
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+}
+
+p {
+    font-family: sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.bgimg {
+    background-image: url('https://img.freepik.com/free-vector/blue-copy-space-digital-background_23-2148821698.jpg?t=st=1658471309~exp=1658471909~hmac=f229a120e74c20f2049d411c5e376f0c6f3918de048ce6007a500d8de27cdf83&w=740');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}

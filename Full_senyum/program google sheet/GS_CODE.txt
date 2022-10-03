@@ -1,0 +1,70 @@
+function myFunction() {
+  
+}
+function doGet(e) { 
+Logger.log( JSON.stringify(e) );
+var result = 'Ok';
+if (e.parameter == 'undefined') {
+result = 'No Parameters';
+}
+else {
+var sheet_id = '1pYayD5m94I5T2m3RhX5NcsidEHKxojNOnfjzqSk6pvY'; // Harus diganti
+var sheet = SpreadsheetApp.openById(sheet_id).getActiveSheet();
+var newRow = sheet.getLastRow() + 1; 
+var rowData = [];
+var Curr_Date = new Date();
+rowData[0] = Curr_Date; // Date in column A
+var Curr_Time = Utilities.formatDate(Curr_Date, "Asia/Jakarta", 'HH:mm:ss');
+rowData[1] = Curr_Time; // Time in column B
+for (var param in e.parameter) {
+Logger.log('In for loop, param=' + param);
+var value = stripQuotes(e.parameter[param]);
+Logger.log(param + ':' + e.parameter[param]);
+switch (param) {
+case 'nama':
+rowData[2] = value; // nama in column C
+result = 'nama Written on column C'; 
+break;
+case 'mitra':
+rowData[3] = value; // nama in column D
+result = 'mitra Written on column D'; 
+break;
+case 'nohp':
+rowData[4] = value; // nama in column E
+result = 'nohp Written on column E'; 
+break;
+case 'keperluan':
+rowData[5] = value; // kelengkapan in column F
+result += ' ,kelengkapan Written on column F'; 
+break;
+case 'detkeg':
+rowData[6] = value; // kelengkapan in column G
+result += ' ,kelengkapan Written on column G'; 
+break;
+case 'linkktp':
+rowData[7] = value; // fotoktp in column H
+result += ' ,fotoktp Written on column H'; 
+break;
+case 'IPP':
+rowData[8] = value; // fotoktp in column K
+result += ' ,IP Public Written on column H';
+var tokenbot = "5427274172:AAFCNqB1ngn1cSY5wWc_TwsO_yIYyQ02UUc";
+var idgroup = "-772748386";
+var ftm = "FTM Percobaan"; //Harus Diganti
+var url = "https://api.telegram.org/bot" +tokenbot+ "/sendMessage?chat_id=" + idgroup + "&text= " + ftm + " Ganti alamat ke http://" + value + ":255";
+var response = UrlFetchApp.fetch(url);
+Logger.log(response.getContentText());
+break;  
+default:
+result = "unsupported parameter";
+}
+}
+Logger.log(JSON.stringify(rowData));
+var newRange = sheet.getRange(newRow, 1, 1, rowData.length);
+newRange.setValues([rowData]);
+}
+return ContentService.createTextOutput(result);
+}
+function stripQuotes( value ) {
+return value.replace(/^["']|['"]$/g, "");
+}
